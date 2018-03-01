@@ -11,5 +11,10 @@ import UIKit
 class TrendingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavbar()
+    }
+    
+    func setupNavbar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

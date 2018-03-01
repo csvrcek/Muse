@@ -11,5 +11,10 @@ import UIKit
 class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavbar()
+    }
+    
+    func setupNavbar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

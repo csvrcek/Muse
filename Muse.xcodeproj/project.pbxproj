@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D96CCE87AA6048C80B60295 /* Pods_Muse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43424BEC62DA20CE861DEF57 /* Pods_Muse.framework */; };
 		DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */; };
-		DB4C1FF320467DFD00CEFEFA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C1FF220467DFD00CEFEFA /* TabBarController.swift */; };
 		DB4C1FF820467DFD00CEFEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */; };
 		DB4C1FFB20467DFD00CEFEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF920467DFD00CEFEFA /* LaunchScreen.storyboard */; };
 		DB4C200420467EE600CEFEFA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C200320467EE500CEFEFA /* FeedViewController.swift */; };
@@ -17,15 +17,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43424BEC62DA20CE861DEF57 /* Pods_Muse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B16E95BC9DD82AA837D990 /* Pods-Muse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muse/Pods-Muse.release.xcconfig"; sourceTree = "<group>"; };
 		DB4C1FED20467DFD00CEFEFA /* Muse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB4C1FF220467DFD00CEFEFA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4C1FFA20467DFD00CEFEFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB4C1FFC20467DFD00CEFEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB4C200320467EE500CEFEFA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		DB4C200720467F0900CEFEFA /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		DF37D39072677791359EA0F6 /* Pods-Muse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muse/Pods-Muse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D96CCE87AA6048C80B60295 /* Pods_Muse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35805C6C61913E5B2A20E6C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF37D39072677791359EA0F6 /* Pods-Muse.debug.xcconfig */,
+				A2B16E95BC9DD82AA837D990 /* Pods-Muse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3B74C49C73F9DE7A82B1FFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43424BEC62DA20CE861DEF57 /* Pods_Muse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB4C1FE420467DFD00CEFEFA = {
 			isa = PBXGroup;
 			children = (
 				DB4C1FEF20467DFD00CEFEFA /* Muse */,
 				DB4C1FEE20467DFD00CEFEFA /* Products */,
+				35805C6C61913E5B2A20E6C8 /* Pods */,
+				C3B74C49C73F9DE7A82B1FFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,7 +92,6 @@
 		DB4C200220467E3E00CEFEFA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DB4C1FF220467DFD00CEFEFA /* TabBarController.swift */,
 				DB4C200320467EE500CEFEFA /* FeedViewController.swift */,
 				DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */,
 				DB4C200720467F0900CEFEFA /* TrendingViewController.swift */,
@@ -85,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB4C1FFF20467DFD00CEFEFA /* Build configuration list for PBXNativeTarget "Muse" */;
 			buildPhases = (
+				CBF65067A42BE433FCBDD7EF /* [CP] Check Pods Manifest.lock */,
 				DB4C1FE920467DFD00CEFEFA /* Sources */,
 				DB4C1FEA20467DFD00CEFEFA /* Frameworks */,
 				DB4C1FEB20467DFD00CEFEFA /* Resources */,
+				13577521285B90B4D7B0330C /* [CP] Embed Pods Frameworks */,
+				C3538333A687AC14F84CCC13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,12 +168,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13577521285B90B4D7B0330C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Muse/Pods-Muse-frameworks.sh",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muse/Pods-Muse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3538333A687AC14F84CCC13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Muse/Pods-Muse-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muse/Pods-Muse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF65067A42BE433FCBDD7EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Muse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB4C1FE920467DFD00CEFEFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB4C1FF320467DFD00CEFEFA /* TabBarController.swift in Sources */,
 				DB4C200420467EE600CEFEFA /* FeedViewController.swift in Sources */,
 				DB4C200820467F0900CEFEFA /* TrendingViewController.swift in Sources */,
 				DB4C200620467EFA00CEFEFA /* FavoritesViewController.swift in Sources */,
@@ -280,6 +364,7 @@
 		};
 		DB4C200020467DFD00CEFEFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF37D39072677791359EA0F6 /* Pods-Muse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +380,7 @@
 		};
 		DB4C200120467DFD00CEFEFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2B16E95BC9DD82AA837D990 /* Pods-Muse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
