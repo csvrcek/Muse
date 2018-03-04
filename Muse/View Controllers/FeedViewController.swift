@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import SnapKit
 
-
-class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+class FeedViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cell = "cellID"
     
     let scrollView: UIScrollView = {
@@ -20,52 +18,30 @@ class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         return scroll
     }()
     
-    lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let collection = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-        collection.collectionViewLayout = layout
-        collection.backgroundColor = UIColor.clear
-        return collection
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.addSubview(scrollView)
-        
-        // Pin the scroll view to the whole view
-        scrollView.snp.makeConstraints {
-            make in
-            make.edges.equalTo(view)
-        }
-        
-        collectionView.frame = view.frame
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cell)
-        
-        scrollView.addSubview(collectionView)
-        
-        
-        
-        setupNavbar()
+        let layout = UICollectionViewFlowLayout()
+        collectionView?.collectionViewLayout = layout
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cell)
     }
     
     func setupNavbar() {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    private func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cell, for: indexPath)
         cell.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 200)
     }
-    
-    
 }
+

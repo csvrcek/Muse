@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         // Feed
-        let feed = FeedViewControllerTest()
+        let layout = UICollectionViewFlowLayout()
+        let feed = FeedViewController(collectionViewLayout: layout)
         feed.tabBarItem = UITabBarItem(title: "Feed", image: #imageLiteral(resourceName: "icons8-news-50"), tag: 0)
         
         // Favorites
