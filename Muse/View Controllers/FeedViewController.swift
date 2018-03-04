@@ -7,19 +7,45 @@
 //
 
 import UIKit
+import SnapKit
+
 
 class FeedViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     let cell = "cellID"
     
+    let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        scroll.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        return scroll
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collection = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        collection.collectionViewLayout = layout
+        collection.backgroundColor = UIColor.clear
+        return collection
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
+        self.view.addSubview(scrollView)
         
-        collectionView.backgroundColor = #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)
+        // Pin the scroll view to the whole view
+        scrollView.snp.makeConstraints {
+            make in
+            make.edges.equalTo(view)
+        }
+        
+        collectionView.frame = view.frame
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cell)
-        view.addSubview(collectionView)
+        
+        scrollView.addSubview(collectionView)
+        
+        
+        
         setupNavbar()
     }
     

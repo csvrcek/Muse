@@ -14,6 +14,7 @@
 		DB4C200420467EE600CEFEFA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C200320467EE500CEFEFA /* FeedViewController.swift */; };
 		DB4C200620467EFA00CEFEFA /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */; };
 		DB4C200820467F0900CEFEFA /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C200720467F0900CEFEFA /* TrendingViewController.swift */; };
+		DB97B23F204B76F700E48348 /* FeedViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97B23E204B76F700E48348 /* FeedViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		DB4C200320467EE500CEFEFA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		DB4C200720467F0900CEFEFA /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		DB97B23E204B76F700E48348 /* FeedViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTest.swift; sourceTree = "<group>"; };
 		DF37D39072677791359EA0F6 /* Pods-Muse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muse/Pods-Muse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				DB4C200320467EE500CEFEFA /* FeedViewController.swift */,
 				DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */,
 				DB4C200720467F0900CEFEFA /* TrendingViewController.swift */,
+				DB97B23E204B76F700E48348 /* FeedViewControllerTest.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -176,11 +179,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Muse/Pods-Muse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
@@ -237,6 +242,7 @@
 				DB4C200420467EE600CEFEFA /* FeedViewController.swift in Sources */,
 				DB4C200820467F0900CEFEFA /* TrendingViewController.swift in Sources */,
 				DB4C200620467EFA00CEFEFA /* FavoritesViewController.swift in Sources */,
+				DB97B23F204B76F700E48348 /* FeedViewControllerTest.swift in Sources */,
 				DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

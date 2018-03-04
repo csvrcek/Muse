@@ -18,3 +18,10 @@ class FavoritesViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
+
+
+// Create a custom UITableView class for the artist/genre list
+// Then add it as a subview to the ViewController above
+// https://www.youtube.com/watch?v=H9NhYx9xIiU
+
+
