@@ -33,6 +33,13 @@ class ArticleCell: UICollectionViewCell {
         return titleLabel
     }()
     
+    override var isHighlighted: Bool {
+        didSet {
+            // Send to article link
+            print("Sent to link")
+        }
+    }
+    
     func setupViews() {
         addSubview(articleImageView)
         addSubview(articleTitleView)
