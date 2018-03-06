@@ -105,7 +105,7 @@
 				DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */,
 				DB20FD89204F47D600671256 /* Helpers */,
 				DB20FD86204F477900671256 /* View */,
-				DB4C200220467E3E00CEFEFA /* View Controllers */,
+				DB4C200220467E3E00CEFEFA /* Controller */,
 				DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */,
 				DB4C1FF920467DFD00CEFEFA /* LaunchScreen.storyboard */,
 				DB4C1FFC20467DFD00CEFEFA /* Info.plist */,
@@ -113,7 +113,7 @@
 			path = Muse;
 			sourceTree = "<group>";
 		};
-		DB4C200220467E3E00CEFEFA /* View Controllers */ = {
+		DB4C200220467E3E00CEFEFA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DB20FD8C204F481C00671256 /* TabBarController.swift */,
@@ -121,7 +121,7 @@
 				DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */,
 				DB4C200720467F0900CEFEFA /* TrendingViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
