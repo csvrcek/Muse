@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3D96CCE87AA6048C80B60295 /* Pods_Muse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43424BEC62DA20CE861DEF57 /* Pods_Muse.framework */; };
+		DB20FD88204F47A600671256 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD87204F47A600671256 /* ArticleCell.swift */; };
+		DB20FD8B204F47E900671256 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD8A204F47E900671256 /* Extensions.swift */; };
+		DB20FD8D204F481C00671256 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD8C204F481C00671256 /* TabBarController.swift */; };
 		DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */; };
 		DB4C1FF820467DFD00CEFEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */; };
 		DB4C1FFB20467DFD00CEFEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF920467DFD00CEFEFA /* LaunchScreen.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		43424BEC62DA20CE861DEF57 /* Pods_Muse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B16E95BC9DD82AA837D990 /* Pods-Muse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muse.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muse/Pods-Muse.release.xcconfig"; sourceTree = "<group>"; };
+		DB20FD87204F47A600671256 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		DB20FD8A204F47E900671256 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DB20FD8C204F481C00671256 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DB4C1FED20467DFD00CEFEFA /* Muse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +65,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB20FD86204F477900671256 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB20FD87204F47A600671256 /* ArticleCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB20FD89204F47D600671256 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB20FD8A204F47E900671256 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DB4C1FE420467DFD00CEFEFA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */,
+				DB20FD89204F47D600671256 /* Helpers */,
+				DB20FD86204F477900671256 /* View */,
 				DB4C200220467E3E00CEFEFA /* View Controllers */,
 				DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */,
 				DB4C1FF920467DFD00CEFEFA /* LaunchScreen.storyboard */,
@@ -92,6 +116,7 @@
 		DB4C200220467E3E00CEFEFA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB20FD8C204F481C00671256 /* TabBarController.swift */,
 				DB4C200320467EE500CEFEFA /* FeedViewController.swift */,
 				DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */,
 				DB4C200720467F0900CEFEFA /* TrendingViewController.swift */,
@@ -237,8 +262,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4C200420467EE600CEFEFA /* FeedViewController.swift in Sources */,
+				DB20FD8B204F47E900671256 /* Extensions.swift in Sources */,
 				DB4C200820467F0900CEFEFA /* TrendingViewController.swift in Sources */,
 				DB4C200620467EFA00CEFEFA /* FavoritesViewController.swift in Sources */,
+				DB20FD8D204F481C00671256 /* TabBarController.swift in Sources */,
+				DB20FD88204F47A600671256 /* ArticleCell.swift in Sources */,
 				DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

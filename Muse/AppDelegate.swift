@@ -19,25 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let tabBarController = UITabBarController()
-        window?.rootViewController = tabBarController
+        window?.rootViewController = TabBarController()
         window?.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        // Feed
-        let layout = UICollectionViewFlowLayout()
-        let feed = FeedViewController(collectionViewLayout: layout)
-        feed.tabBarItem = UITabBarItem(title: "Feed", image: #imageLiteral(resourceName: "icons8-news-50"), tag: 0)
-        
-        // Favorites
-        let faves = FavoritesViewController()
-        faves.tabBarItem = UITabBarItem(title: "Favorites", image: #imageLiteral(resourceName: "icons8-heart-outline-50"), tag: 1)
-        
-        // Trending
-        let trend = TrendingViewController()
-        trend.tabBarItem = UITabBarItem(title: "Trending", image: #imageLiteral(resourceName: "icons8-gas-filled-50"), tag: 2)
-        
-        let controllers = [feed, faves, trend]
-        tabBarController.viewControllers = controllers.map {UINavigationController(rootViewController: $0) }
         return true
     }
 
