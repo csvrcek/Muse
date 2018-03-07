@@ -11,6 +11,7 @@ import UIKit
 class FeedViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cell = "cellID"
     
+    // TODO: Create a REST API to dynamically produce articles?
     var articles: [Article] = {
         var drakeGodsPlanArticle = Article()
         drakeGodsPlanArticle.articleTitle = "Drake's 'God's Plan' No. 1 on Billboard Hot 100 for Sixth Week, Post Malone's 'Psycho' Debuts at No. 2"
