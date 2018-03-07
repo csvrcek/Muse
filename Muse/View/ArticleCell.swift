@@ -19,7 +19,24 @@ class ArticleCell: UICollectionViewCell {
         didSet {
             articleTitleLabel.text = article?.articleTitle
             
-            articleImageView.image = UIImage(named: (article?.articleImageName)!)
+            if let articleImageName = article?.articleImageName {
+                articleImageView.image = UIImage(named: articleImageName)
+            }
+            
+            // Measure the title text
+            if let articleTitle = article?.articleTitle {
+                let size = CGSize(width: frame.width - 16 - 44 - 8 - 16, height: 1000)
+                let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+                let estimatedRect = NSString(string: articleTitle).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)], context: nil)
+                
+                if estimatedRect.size.height > 20 {
+                    articleTitleLabelHeightConstraint?.constant = 44
+                } else {
+                    articleTitleLabelHeightConstraint?.constant = 20
+                }
+            }
+            
+            
         }
     }
     
@@ -48,6 +65,8 @@ class ArticleCell: UICollectionViewCell {
         }
     }
     
+    var articleTitleLabelHeightConstraint: NSLayoutConstraint?
+    
     func setupViews() {
         addSubview(articleImageView)
         addSubview(articleTitleLabel)
@@ -57,7 +76,10 @@ class ArticleCell: UICollectionViewCell {
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: articleTitleLabel)
         
         // "On the vertical part, v0 will be 16 pixels from the left and the right"
-        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(60)]-16-|", views: articleImageView, articleTitleLabel)
+        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(60)]-36-|", views: articleImageView, articleTitleLabel)
+        
+        articleTitleLabelHeightConstraint = NSLayoutConstraint(item: articleTitleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 22)
+        addConstraint(articleTitleLabelHeightConstraint!)
         
     }
     

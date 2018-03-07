@@ -21,7 +21,7 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
         drakeHERArticle.articleImageName = "drake_her_jungle"
         
         
-        return [drakeGodsPlanArticle, drakeHERArticle]
+        return [drakeGodsPlanArticle, drakeHERArticle, drakeGodsPlanArticle, drakeHERArticle, drakeGodsPlanArticle]
     }()
     
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Getting 16:9 aspect ratio
         let height = (view.frame.width - 16 - 16) * 9 / 16
-        return CGSize(width: view.frame.width, height: height + 16 + 68)
+        return CGSize(width: view.frame.width, height: height + 16 + 80)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
