@@ -11,6 +11,19 @@ import UIKit
 class FeedViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let cell = "cellID"
     
+    var articles: [Article] = {
+        var drakeGodsPlanArticle = Article()
+        drakeGodsPlanArticle.articleTitle = "Drake's 'God's Plan' No. 1 on Billboard Hot 100 for Sixth Week, Post Malone's 'Psycho' Debuts at No. 2"
+        drakeGodsPlanArticle.articleImageName = "drake_gods_plan_post_malone"
+        
+        var drakeHERArticle = Article()
+        drakeHERArticle.articleTitle = "Drake and H.E.R. sing a duet in this inventive fan-made “Jungle” remix"
+        drakeHERArticle.articleImageName = "drake_her_jungle"
+        
+        
+        return [drakeGodsPlanArticle, drakeHERArticle]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewFlowLayout()
@@ -26,12 +39,13 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cell, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cell, for: indexPath) as! ArticleCell
+        cell.article = articles[indexPath.item]
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return articles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

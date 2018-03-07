@@ -15,16 +15,24 @@ class ArticleCell: UICollectionViewCell {
         setupViews()
     }
     
+    var article: Article? {
+        didSet {
+            articleTitleLabel.text = article?.articleTitle
+            
+            articleImageView.image = UIImage(named: (article?.articleImageName)!)
+        }
+    }
+    
     let articleImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        //imageView.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    let articleTitleView: UILabel = {
+    let articleTitleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = "This is a placeholder article title. Hopefully I can figure out how to make this all look good 🤔"
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -42,14 +50,14 @@ class ArticleCell: UICollectionViewCell {
     
     func setupViews() {
         addSubview(articleImageView)
-        addSubview(articleTitleView)
+        addSubview(articleTitleLabel)
         
         // "On the horizontal part, v0 will be 16 pixels from the left and the right"
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: articleImageView)
-        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: articleTitleView)
+        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: articleTitleLabel)
         
         // "On the vertical part, v0 will be 16 pixels from the left and the right"
-        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(60)]-16-|", views: articleImageView, articleTitleView)
+        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(60)]-16-|", views: articleImageView, articleTitleLabel)
         
     }
     

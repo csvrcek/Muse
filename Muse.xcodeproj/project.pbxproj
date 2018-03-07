@@ -17,6 +17,7 @@
 		DB4C200420467EE600CEFEFA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C200320467EE500CEFEFA /* FeedViewController.swift */; };
 		DB4C200620467EFA00CEFEFA /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */; };
 		DB4C200820467F0900CEFEFA /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C200720467F0900CEFEFA /* TrendingViewController.swift */; };
+		DBE70687204F9DB60063C02B /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE70686204F9DB60063C02B /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		DB4C200320467EE500CEFEFA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		DB4C200720467F0900CEFEFA /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		DBE70686204F9DB60063C02B /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		DF37D39072677791359EA0F6 /* Pods-Muse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muse/Pods-Muse.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */,
+				DBE70685204F9D9E0063C02B /* Model */,
 				DB20FD89204F47D600671256 /* Helpers */,
 				DB20FD86204F477900671256 /* View */,
 				DB4C200220467E3E00CEFEFA /* Controller */,
@@ -122,6 +125,14 @@
 				DB4C200720467F0900CEFEFA /* TrendingViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DBE70685204F9D9E0063C02B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBE70686204F9DB60063C02B /* Article.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				DB20FD8B204F47E900671256 /* Extensions.swift in Sources */,
 				DB4C200820467F0900CEFEFA /* TrendingViewController.swift in Sources */,
 				DB4C200620467EFA00CEFEFA /* FavoritesViewController.swift in Sources */,
+				DBE70687204F9DB60063C02B /* Article.swift in Sources */,
 				DB20FD8D204F481C00671256 /* TabBarController.swift in Sources */,
 				DB20FD88204F47A600671256 /* ArticleCell.swift in Sources */,
 				DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */,
