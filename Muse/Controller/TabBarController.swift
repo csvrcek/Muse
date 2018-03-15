@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
         faves.tabBarItem = UITabBarItem(title: "Favorites", image: #imageLiteral(resourceName: "icons8-heart-outline-50"), tag: 1)
         
         // Trending
-        let trend = TrendingViewController()
+        let trend = TrendingViewController(collectionViewLayout: layout)
         trend.tabBarItem = UITabBarItem(title: "Trending", image: #imageLiteral(resourceName: "icons8-gas-filled-50"), tag: 2)
         
         let controllers = [feed, faves, trend]
