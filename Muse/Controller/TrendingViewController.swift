@@ -15,7 +15,7 @@ class TrendingViewController: UIViewController {
     }
     
     func setupNavbar() {
-        navigationItem.title = "Trending"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Muse"
+        //navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

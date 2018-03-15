@@ -15,8 +15,8 @@ class FavoritesViewController: UIViewController {
     }
     
     func setupNavbar() {
-        navigationItem.title = "Favorites"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Muse"
+        //navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 

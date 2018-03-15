@@ -25,6 +25,15 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
         return [drakeGodsPlanArticle, drakeHERArticle, drakeGodsPlanArticle, drakeHERArticle, drakeGodsPlanArticle]
     }()
     
+    var tweets: [Tweet] = {
+        var postMaloneMusicTweet = Tweet()
+        postMaloneMusicTweet.profileImageName = "drake_twitter_profile"
+        postMaloneMusicTweet.tweet = "music is incredible. the act of throwing reality out the window and getting fucking lost. the world is fucked, but for those 3-4 minutes everything is okay."
+        
+        
+        return [postMaloneMusicTweet]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewFlowLayout()
@@ -35,8 +44,8 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     func setupNavbar() {
-        navigationItem.title = "Feed"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Muse"
+        //navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
