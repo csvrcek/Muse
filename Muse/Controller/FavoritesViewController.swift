@@ -11,12 +11,21 @@ import UIKit
 class FavoritesViewController: UITableViewController {
     let cellID = "cellID"
     
-    let artists = [
-        ["Drake"],
-    ]
+    var artists: [Favorite]  = {
+        let drake = Favorite()
+        drake.name = "Drake"
+        drake.imageName = "drake"
+        
+        let travis = Favorite()
+        travis.name = "Travis Scott"
+        travis.imageName = "travis"
+        
+        return [drake, travis]
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         setupNavbar()
@@ -26,29 +35,30 @@ class FavoritesViewController: UITableViewController {
         navigationItem.title = "Muse"
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UILabel()
-        header.text = "Header"
-        return header
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            artists.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return artists.count
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObject = artists[sourceIndexPath.row]
+        artists.remove(at: sourceIndexPath.row)
+        artists.insert(movedObject, at: destinationIndexPath.row)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return artists[section].count
+        return artists.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         
-        let name = artists[indexPath.section][indexPath.row]
+        let artist = artists[indexPath.row]
         
-        let artistPic = UIImage(named: "drake")
-        
-        cell?.textLabel?.text = name
-        cell?.imageView?.image = artistPic
+        cell?.textLabel?.text = artist.name
+        cell?.imageView?.image = UIImage(named: artist.imageName!)
         
         return cell!
     }

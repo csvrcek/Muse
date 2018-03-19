@@ -11,6 +11,7 @@
 		DB20FD88204F47A600671256 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD87204F47A600671256 /* ArticleCell.swift */; };
 		DB20FD8B204F47E900671256 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD8A204F47E900671256 /* Extensions.swift */; };
 		DB20FD8D204F481C00671256 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD8C204F481C00671256 /* TabBarController.swift */; };
+		DB2B086F20607B5E0027B7D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2B086E20607B5E0027B7D9 /* GoogleService-Info.plist */; };
 		DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */; };
 		DB4C1FF820467DFD00CEFEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */; };
 		DB4C1FFB20467DFD00CEFEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF920467DFD00CEFEFA /* LaunchScreen.storyboard */; };
@@ -30,6 +31,7 @@
 		DB20FD87204F47A600671256 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		DB20FD8A204F47E900671256 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DB20FD8C204F481C00671256 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DB2B086E20607B5E0027B7D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB4C1FED20467DFD00CEFEFA /* Muse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */,
 				DB4C1FF920467DFD00CEFEFA /* LaunchScreen.storyboard */,
 				DB4C1FFC20467DFD00CEFEFA /* Info.plist */,
+				DB2B086E20607B5E0027B7D9 /* GoogleService-Info.plist */,
 			);
 			path = Muse;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				DB4C1FFB20467DFD00CEFEFA /* LaunchScreen.storyboard in Resources */,
 				DB4C1FF820467DFD00CEFEFA /* Assets.xcassets in Resources */,
+				DB2B086F20607B5E0027B7D9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,15 +228,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Muse/Pods-Muse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
