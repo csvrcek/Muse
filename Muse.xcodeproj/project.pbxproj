@@ -12,6 +12,7 @@
 		DB20FD8B204F47E900671256 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD8A204F47E900671256 /* Extensions.swift */; };
 		DB20FD8D204F481C00671256 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB20FD8C204F481C00671256 /* TabBarController.swift */; };
 		DB2B086F20607B5E0027B7D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2B086E20607B5E0027B7D9 /* GoogleService-Info.plist */; };
+		DB2B0871206082430027B7D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2B0870206082430027B7D9 /* LoginViewController.swift */; };
 		DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */; };
 		DB4C1FF820467DFD00CEFEFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */; };
 		DB4C1FFB20467DFD00CEFEFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4C1FF920467DFD00CEFEFA /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 		DB20FD8A204F47E900671256 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DB20FD8C204F481C00671256 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DB2B086E20607B5E0027B7D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB2B0870206082430027B7D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB4C1FED20467DFD00CEFEFA /* Muse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4C1FF020467DFD00CEFEFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB4C1FF720467DFD00CEFEFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				DB4C200320467EE500CEFEFA /* FeedViewController.swift */,
 				DB4C200520467EFA00CEFEFA /* FavoritesViewController.swift */,
 				DB4C200720467F0900CEFEFA /* TrendingViewController.swift */,
+				DB2B0870206082430027B7D9 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				DBE70687204F9DB60063C02B /* Article.swift in Sources */,
 				DB20FD8D204F481C00671256 /* TabBarController.swift in Sources */,
 				DB20FD88204F47A600671256 /* ArticleCell.swift in Sources */,
+				DB2B0871206082430027B7D9 /* LoginViewController.swift in Sources */,
 				DB4C1FF120467DFD00CEFEFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

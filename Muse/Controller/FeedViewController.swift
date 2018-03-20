@@ -54,6 +54,12 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     func setupNavbar() {
         navigationItem.title = "Muse"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+    }
+    
+    @objc func handleLogout() {
+        let login = LoginController()
+        present(login, animated: true, completion: nil)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
