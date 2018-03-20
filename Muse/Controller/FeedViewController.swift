@@ -8,6 +8,11 @@
 
 import UIKit
 import TwitterKit
+import Firebase
+import FirebaseAuth
+import FirebaseAuthUI
+
+
 
 class FeedViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let articleCell = "cellID"
@@ -58,6 +63,12 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     @objc func handleLogout() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
         let login = LoginController()
         present(login, animated: true, completion: nil)
     }
