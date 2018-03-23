@@ -63,13 +63,8 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     @objc func handleLogout() {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
         let login = LoginController()
+        login.modalTransitionStyle = .flipHorizontal
         present(login, animated: true, completion: nil)
     }
     
