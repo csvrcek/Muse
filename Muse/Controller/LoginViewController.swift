@@ -32,9 +32,32 @@ class LoginController: UIViewController  {
         login.layer.cornerRadius = 5
         login.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         login.layer.masksToBounds = true
-        login.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
+        login.addTarget(self, action: #selector(handleLoginRegister), for: .touchUpInside)
         return login
     }()
+    
+    @objc func handleLoginRegister() {
+        if loginRegisterControl.selectedSegmentIndex == 0 {
+            handleLogin()
+        } else {
+            handleRegister()
+        }
+    }
+    
+    func handleLogin() {
+        guard let email = emailTextField.text, let password = passwordField.text else {
+            print("Form is not valid")
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                print(error as Any)
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
     @objc func handleRegister() {
         guard let name = nameTextField.text, let email = emailTextField.text, let password = passwordField.text else {
@@ -60,11 +83,12 @@ class LoginController: UIViewController  {
                     print(err as Any)
                     return
                 }
-                
-                // Successfully added user to database
+                self.dismiss(animated: true, completion: nil)
             })
         }
     }
+    
+    
     
     let nameTextField: UITextField = {
         let name = UITextField()
@@ -135,6 +159,7 @@ class LoginController: UIViewController  {
         nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterControl.selectedSegmentIndex == 0 ? 0 : 1/3)
         nameTextFieldHeightAnchor?.isActive = true
         
+        // Adjust email and password fields
         emailTextFieldHeightAnchor?.isActive = false
         emailTextFieldHeightAnchor = emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterControl.selectedSegmentIndex == 0 ? 1/2 : 1/3)
         emailTextFieldHeightAnchor?.isActive = true

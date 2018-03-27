@@ -13,7 +13,6 @@ import FirebaseAuth
 import FirebaseAuthUI
 
 
-
 class FeedViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let articleCell = "cellID"
     
@@ -43,18 +42,9 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
         collectionView?.register(ArticleCell.self, forCellWithReuseIdentifier: articleCell)
         setupNavbar()
         
-        // TODO: Use static JSON to render tweets
-//        let tweetView = TWTRTweetView(tweet: )
-//        tweetView.showActionButtons = true
-//
-//        client.loadTweet(withID: "20") { (tweet, error) in
-//            // handle the response or error
-//            if let t = tweet {
-//                tweetView.configure(with: t)
-//            } else {
-//                print("Failed to load Tweet: \(String(describing: error?.localizedDescription))")
-//            }
-//        }
+        if Auth.auth().currentUser?.uid == nil {
+            performSelector(inBackground: #selector(handleLogout), with: nil)
+        }
     }
     
     func setupNavbar() {
@@ -63,9 +53,14 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     @objc func handleLogout() {
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        
         let login = LoginController()
-        login.modalTransitionStyle = .flipHorizontal
-        present(login, animated: true, completion: nil)
+        navigationController?.present(login, animated: true, completion: nil)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
