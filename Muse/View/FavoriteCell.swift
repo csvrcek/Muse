@@ -8,10 +8,15 @@
 
 import UIKit
 
-class FavoriteCell: BaseCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+class FavoriteCell: UITableViewCell {
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     var favorite: Favorite? {
@@ -42,37 +47,30 @@ class FavoriteCell: BaseCell {
         return name
     }()
     
-    let separatorView: UIView = {
-        let sep = UIView()
-        sep.backgroundColor = UIColor.black
-        sep.translatesAutoresizingMaskIntoConstraints = false
-        return sep
-    }()
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override var isHighlighted: Bool {
         didSet {
             // Send to Discography page
             print("Sent to Disc page")
-//            self.contentView.backgroundColor = UIColor(displayP3Red: 211, green: 211, blue: 211, alpha: 1)
         }
     }
     
-    override func setupViews() {
-        addSubview(nameLabel)
-        addSubview(photoImageView)
-        addSubview(separatorView)
+    func setupViews() {
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(photoImageView)
         
         
         // Horizontal constraints
-        addConstraintsWithFormat(format: "H:|-10-[v0(70)]-10-[v1]|", views: photoImageView, nameLabel)
-        addConstraintsWithFormat(format: "H:|[v0]|", views: separatorView)
+        photoImageView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 10)
+        photoImageView.rightAnchor.constraint(equalTo: nameLabel.leftAnchor, constant: 10)
+        photoImageView.widthAnchor.constraint(equalToConstant: 15)
+        photoImageView.heightAnchor.constraint(equalTo: self.contentView.heightAnchor)
+        
+        nameLabel.leftAnchor.constraint(equalTo: photoImageView.rightAnchor, constant: 10)
+        
+        //addConstraintsWithFormat(format: "H:|-10-[v0(5)]-10-[v1]|", views: photoImageView, nameLabel)
         
         // Vertical constraints
-        addConstraintsWithFormat(format: "V:|-10-[v0]-10-[v1(1)]|", views: photoImageView, separatorView)
-        addConstraintsWithFormat(format: "V:|-10-[v0]-10-|", views: nameLabel)
+        //addConstraintsWithFormat(format: "V:|-10-[v0]-10-|", views: photoImageView)
+        //addConstraintsWithFormat(format: "V:|-10-[v0]-10-|", views: nameLabel)
     }
 }

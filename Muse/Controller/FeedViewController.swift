@@ -75,7 +75,8 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Get 16:9 aspect ratio
-        let height = (view.frame.width - 16 - 16) * 9 / 16
+        let width = view.frame.width - 16 - 16
+        let height = (width) * 9 / 16
         return CGSize(width: view.frame.width, height: height + 16 + 80)
     }
     

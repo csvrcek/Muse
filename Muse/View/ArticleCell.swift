@@ -35,8 +35,6 @@ class ArticleCell: BaseCell {
                     articleTitleLabelHeightConstraint?.constant = 20
                 }
             }
-            
-            
         }
     }
     

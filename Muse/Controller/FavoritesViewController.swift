@@ -26,9 +26,15 @@ class FavoritesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Insert", style: .plain, target: self, action: #selector(handleInsert))
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         setupNavbar()
+    }
+    
+    // TODO: implement insert feature
+    @objc func handleInsert() {
+        print("Inserted")
     }
     
     func setupNavbar() {

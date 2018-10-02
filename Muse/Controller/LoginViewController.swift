@@ -55,6 +55,8 @@ class LoginController: UIViewController  {
                 print(error as Any)
                 return
             }
+            
+            // Successfully logged in
             self.dismiss(animated: true, completion: nil)
         }
     }
